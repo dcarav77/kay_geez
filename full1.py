@@ -89,6 +89,12 @@ for cost in costs_hpt:
 # Engines -> Parts
 from itertools import cycle
 
+for engine in engines:
+    for _ in range(2):
+        if parts_hpt:  # Prevent list exhaustion
+            part = parts_hpt.pop(0)
+            G_hpt.add_edge(engine, part, relationship="contains component")
+
 parts_cycle = cycle(parts_hpt)
 for engine in engines:
     for _ in range(2):  # Connect each engine to 2 parts
@@ -142,7 +148,11 @@ colors_hpt = plt.cm.tab20(range(len(categories_hpt)))
 
 # Ensure "Engine" nodes are green
 node_colors_hpt = [
-    "green" if G_hpt.nodes[node]["category"] == "Engine" else colors_hpt[categories_hpt.index(G_hpt.nodes[node]["category"])]
+    "green" if G_hpt.nodes[node]["category"] == "Engine" else
+    "#FA8072" if G_hpt.nodes[node]["category"] == "Cost" else  # Salmon color for Cost nodes
+    "#FFD700" if G_hpt.nodes[node]["category"] == "Fault" else 
+    "#32CD32" if G_hpt.nodes[node]["category"] == "Part" else
+    colors_hpt[categories_hpt.index(G_hpt.nodes[node]["category"])]
     for node in G_hpt.nodes()
 ]
 
@@ -158,9 +168,14 @@ nx.draw_networkx_edge_labels(G_hpt, pos_hpt, edge_labels=edge_labels, font_size=
 # Add legend
 legend_elements_hpt = [
     plt.Line2D([0], [0], marker="o", color="w", label=category, markersize=10, 
-               markerfacecolor=("green" if category == "Engine" else colors_hpt[i]))
+               markerfacecolor=("green" if category == "Engine" else
+                                "#FA8072" if category == "Cost" else  # Salmon for Cost
+                                "#FFD700" if category == "Fault" else
+                                "#32CD32" if category == "Part" else
+                                colors_hpt[i]))
     for i, category in enumerate(categories_hpt)
 ]
+
 plt.legend(handles=legend_elements_hpt, loc="lower center", bbox_to_anchor=(0.5, -0.1), 
            title="Node Categories", ncol=3, frameon=False)
 

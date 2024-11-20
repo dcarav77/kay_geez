@@ -87,6 +87,7 @@ for action in actions_hpt:
 for cost in costs_hpt:
     G_hpt.add_node(cost, category="Cost")
 
+
 # Add relationships
 # Engines -> Parts
 for engine in engines:
@@ -126,6 +127,28 @@ additional_edges = [
     ("HPT Casing", "Oxidation and Corrosion", "is vulnerable to"),
     ("Gas Path Seals", "Foreign Object Damage (FOD)", "is affected by")
 ]
+
+# Maintenance Actions -> Costs
+action_cost_edges = [
+    ("Replace HPT Disk", "$15,000"),
+    ("Inspect Seal Integrity", "$5,000"),
+    ("Recalibrate Torque Shaft", "$7,500"),
+    ("Perform Weld Overlay on Blade Tip", "$10,000"),
+    ("Re-coat Blade with Aluminide Coating", "$12,000")
+]
+
+for action, cost in action_cost_edges:
+    G_hpt.add_edge(action, cost, relationship="has cost")
+
+# Additional Costs for Parts (optional)
+part_cost_edges = [
+    ("HPT Stage 1 Disk", "$10,000"),
+    ("HPT Stage 2 Disk", "$8,000"),
+    ("HPT Torque Shaft", "$6,500")
+]
+
+for part, cost in part_cost_edges:
+    G_hpt.add_edge(part, cost, relationship="costs")
 
 for source, target, relationship in additional_edges:
     G_hpt.add_edge(source, target, relationship=relationship)
