@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/ontology/hpt_ontology.owl"
+         xmlns="http://example.org/ontology/hpt_ontology.owl#">
+
+<owl:Ontology rdf:about="http://example.org/ontology/hpt_ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#contains_component">
+  <rdfs:domain rdf:resource="#Engine"/>
+  <rdfs:range rdf:resource="#Part"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_fault">
+  <rdfs:domain rdf:resource="#Part"/>
+  <rdfs:range rdf:resource="#Fault"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_addressed_by">
+  <rdfs:domain rdf:resource="#Fault"/>
+  <rdfs:range rdf:resource="#MaintenanceAction"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#incurs_cost">
+  <rdfs:domain rdf:resource="#Fault"/>
+  <rdfs:range rdf:resource="#Cost"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Engine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Part">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fault">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MaintenanceAction">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cost">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Rolls-Royce_BR700-715A1-30">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rolls-Royce_BR700-715B1-30">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rolls-Royce_BR700-715C1-30">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CL-600-2B19_Series">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#General_Electric_CF34-8C5B1">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Pratt_&amp;_Whitney_PW1500G">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Stage_1_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Stage_2_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Torque_Shaft">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Interstage_Seal_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Blades_(Stage_1)">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Blades_(Stage_2)">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Front_Cover_Plate">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Rear_Cover_Plate">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Curvic_Ring">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Bolting_(Stage_1_&amp;_2)">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Inducer_Seal">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Interstage_Seal">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turbine_Aft_Seal_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#CDP_Seal">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oil_Seal_(High-Pressure)">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Air_Seal_(High-Pressure)">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Shaft_Seal">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NGV_Seal">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Torque_Shaft_Cover">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stub_Shaft">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#LPT_Main_Shaft">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stage_1_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stage_2_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Impeller_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turbine_Shaft_Coupling_Disk">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#NGV">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Cooling_Vanes">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Nozzle">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Cooling_Holes">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Cooling_Channels">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Casing">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#High-Pressure_Air_Duct">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Retaining_Ring">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Locking_Plates">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Blade_Shroud">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Disc_Retention_Bolts">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Turbine_Wheel_Hub">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#High-Pressure_Air_Pipe">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Gas_Path_Seals">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Disk_Spacer">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Braze_Failure">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tip_Cap_Loss">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Creep_Deformation">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Low_Cycle_Fatigue_(LCF)">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#High_Cycle_Fatigue_(HCF)">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Thermal_Fatigue_Cracking">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Stress_Concentration_Fracture">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Blade/Disk_Dovetail_Cracking">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Vibratory_Stress_Failure">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Overtemperature_Induced_Failure">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Seal_Leakage">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Disk_Cracking">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Blade_Tip_Burnout">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Bolt_Hole_Fracture">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Interstage_Seal_Erosion">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tip_Clearance_Wear">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Rotor_Overspeed_Damage">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Oxidation_and_Corrosion">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Foreign_Object_Damage_(FOD)">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#HPT_Blade_Shear_Failure">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Braze_Failure">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Tip_Cap_Loss">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Creep_Deformation">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Low_Cycle_Fatigue_(LCF)">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_High_Cycle_Fatigue_(HCF)">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Thermal_Fatigue_Cracking">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Stress_Concentration_Fracture">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Blade/Disk_Dovetail_Cracking">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Vibratory_Stress_Failure">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Overtemperature_Induced_Failure">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Seal_Leakage">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Disk_Cracking">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Blade_Tip_Burnout">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Bolt_Hole_Fracture">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Interstage_Seal_Erosion">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Tip_Clearance_Wear">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Rotor_Overspeed_Damage">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Oxidation_and_Corrosion">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_Foreign_Object_Damage_(FOD)">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Cost_for_HPT_Blade_Shear_Failure">
+  <rdf:type rdf:resource="#Cost"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
