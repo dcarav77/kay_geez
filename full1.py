@@ -161,6 +161,12 @@ nx.draw_networkx_nodes(G_hpt, pos_hpt, node_color=node_colors_hpt, node_size=120
 nx.draw_networkx_edges(G_hpt, pos_hpt, arrowstyle="->", arrowsize=10, edge_color="gray")
 nx.draw_networkx_labels(G_hpt, pos_hpt, font_size=8, font_color="black", font_weight="bold")
 
+# Add edge labels showing ontology properties
+edge_labels = {
+    (u, v): data.get("ontology_property").name if "ontology_property" in data else data.get("relationship", "")
+    for u, v, data in G_hpt.edges(data=True)
+}
+
 # Add edge labels to show relationships
 edge_labels = nx.get_edge_attributes(G_hpt, "relationship")
 nx.draw_networkx_edge_labels(G_hpt, pos_hpt, edge_labels=edge_labels, font_size=8)
