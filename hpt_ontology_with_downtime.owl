@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/ontology/hpt_ontology.owl"
+         xmlns="http://example.org/ontology/hpt_ontology.owl#">
+
+<owl:Ontology rdf:about="http://example.org/ontology/hpt_ontology.owl"/>
+
+<owl:ObjectProperty rdf:about="#contains_component">
+  <rdfs:domain rdf:resource="#Engine"/>
+  <rdfs:range rdf:resource="#Part"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#has_fault">
+  <rdfs:domain rdf:resource="#Part"/>
+  <rdfs:range rdf:resource="#Fault"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_addressed_by">
+  <rdfs:domain rdf:resource="#Fault"/>
+  <rdfs:range rdf:resource="#MaintenanceAction"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#incurs_cost">
+  <rdfs:domain rdf:resource="#Fault"/>
+  <rdfs:range rdf:resource="#Cost"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#Engine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Part">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Fault">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MaintenanceAction">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Cost">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#Engine_1">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_2">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_3">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_4">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_5">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_6">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_7">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_8">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_9">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_10">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_11">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_12">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_13">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_14">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_15">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_16">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_17">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_18">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_19">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Engine_20">
+  <rdf:type rdf:resource="#Engine"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_1">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_2">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_3">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_4">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_5">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_6">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_7">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_8">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_9">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_10">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_11">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_12">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_13">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_14">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_15">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_16">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_17">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_18">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_19">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_20">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_21">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_22">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_23">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_24">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_25">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_26">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_27">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_28">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_29">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_30">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_31">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_32">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_33">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_34">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_35">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_36">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_37">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_38">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_39">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Part_40">
+  <rdf:type rdf:resource="#Part"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Braze_Failure">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Tip_Cap_Loss">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Creep_Deformation">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Low_Cycle_Fatigue_(LCF)">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Disk_Cracking">
+  <rdf:type rdf:resource="#Fault"/>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
+
