@@ -164,7 +164,7 @@ plt.legend(handles=legend_elements_hpt, loc="lower center", bbox_to_anchor=(0.5,
            title="Node Categories", ncol=3, frameon=False)
 
 # Add title to the graph
-plt.title("Aviation Maintenance Knowledge Graph", fontsize=16)
+plt.title(" Ship Maintenance Knowledge Graph", fontsize=16)
 
 # Remove axes for better visualization
 plt.axis("off")
